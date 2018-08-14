@@ -1,4 +1,4 @@
-"""Resize the imgs in the dataset."""
+"""Resize and convert imgs to greyscale."""
 import os
 from os.path import join
 import numpy as np
