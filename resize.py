@@ -14,11 +14,13 @@ new_size_w = 512
 
 # get the paths of image into a list
 img_paths = os.listdir(path=img_dir_path)
+i = 1
 
 # loop through the images
 for img_path in img_paths:
     img_absolute_path = join(img_dir_path, img_path)
-
+    new_img_path = join(img_dir_path, str(i) + '.jpg')
+    i = i + 1
     # read image
     img = cv2.imread(img_absolute_path)
     print(img_absolute_path)
@@ -31,5 +33,5 @@ for img_path in img_paths:
 #     img = img.astype(np.float32)
 #     img /= 255
 #     save the image
-    cv2.imwrite(img_absolute_path, img)
+    cv2.imwrite(new_img_path, img)
 #     plt.imshow(plt.imread(img_absolute_path))
