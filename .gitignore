@@ -3,3 +3,8 @@ data_division
 data_old
 export_data
 export_data_copy
+elephant_data
+elephant_data_test_train
+elephant_final
+plate_data_converted
+plate_data_original
