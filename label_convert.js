@@ -39,7 +39,7 @@ readFiles(path, (dirname, filename, content) => {
 
   // create the json model of annotation
   var model = {
-    tags: ["train"],
+    tags: ["test"],
     objects: [],
     size: {
       height: 512,

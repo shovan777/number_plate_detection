@@ -1,4 +1,5 @@
-"""Resize the imgs in the dataset."""
+
+"""Resize and convert imgs to greyscale."""
 import os
 from os.path import join
 import numpy as np
@@ -6,9 +7,16 @@ from scipy import ndimage
 from matplotlib import pyplot as plt
 import cv2
 import numpy as np
+import sys
+
+# print(len(sys.argv))
+# check if data location is provided
+if (len(sys.argv) < 2):
+  print("give data dir")
+  sys.exit(-1)
 
 """Initialize path and size variables."""
-img_dir_path = "data/"
+img_dir_path = sys.argv[1]
 new_size_h = 512
 new_size_w = 512
 
@@ -19,7 +27,7 @@ i = 1
 # loop through the images
 for img_path in img_paths:
     img_absolute_path = join(img_dir_path, img_path)
-    new_img_path = join(img_dir_path, str(i) + '.jpg')
+    new_img_path = join(img_dir_path, img_path)
     i = i + 1
     # read image
     img = cv2.imread(img_absolute_path)
