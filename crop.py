@@ -18,7 +18,6 @@ def resize_img(img_array, img_h, img_w, keep_ratio=False, shrink=True):
     if not shrink:
         inter_alg = cv2.INTER_CUBIC
     resized = cv2.resize(image, new_dim, interpolation = cv2.INTER_AREA)
-    cv2.resize
     return resized
 
 
@@ -33,9 +32,9 @@ def crop_img(img_array, x_left, x_right, y_bottom, y_top):
 
 
 
-image = cv2.imread("PUL070BEX440.png")
-# display_img(image)
-print(image.shape)
-print(resize_img(image, 220, 210, True).shape)
-
-display_img(crop_img(image, 40, 440, 60, 320))
+# image = cv2.imread("PUL070BEX440.png")
+# # display_img(image)
+# print(image.shape)
+# print(resize_img(image, 220, 210, True).shape)
+#
+# display_img(crop_img(image, 40, 440, 60, 320))
